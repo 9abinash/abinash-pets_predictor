@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+</head>
+<!-- <body> -->
+ <!-- <div class="login"> -->
+	<!-- <h1>Predict Salary Analysis</h1> -->
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <!-- <form action="{{ url_for('predict')}}"method="post"> -->
+    	<!-- <input type="text" name="experience" placeholder="Experience" required="required" /> -->
+        <!-- <input type="text" name="test_score" placeholder="Test Score" required="required" /> -->
+		<!-- <input type="text" name="interview_score" placeholder="Interview Score" required="required" /> -->
+
+        <!-- <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button> -->
+    <!-- </form> -->
+
+   <!-- <br> -->
+   <!-- <br> -->
+   <!-- {{ prediction_text }} -->
+
+ <!-- </div> -->
+ 
+<!-- <!DOCTYPE html> -->
+<!-- <!-- <html> -->
+<!-- <head> -->
+    <!-- <title>Abinash predict pet image app</title> -->
+    <!-- <style> -->
+        <!-- * { -->
+            <!-- font-size:30px; -->
+        <!-- } -->
+    <!-- </style> -->
+<!-- </head> -->
+<!-- <body>     -->
+    <!-- <input id="image-selector" type="file">     -->
+    <!-- <button id="predict-button">Predict</button>  -->
+    <!-- <p>Dog: <span id="dog-prediction"></span></p> -->
+    <!-- <p>Cat: <span id="cat-prediction"></span></p> -->
+    <!-- <img id="selected-image" src=""/> -->
+       
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
+    <!-- <script> -->
+   <!-- {{ prediction_text }} -->
+
+
+
+<!-- </body> -->
+<!-- </html> --> 
+
+<html>
+<head>
+    <title>deeplizard predict image app</title>
+    <style>
+        * {
+            font-size:30px;
+        }
+    </style>
+</head>
+<body>    
+	<form action="{{ url_for('predict')}}"method="post" enctype="multipart/form-data">
+		<input id="image-selector" name='imagefile' placeholder="imagefile" type="file" required="required"> 
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+	<!-- <img id="selected-image" src=""/> -->
+    {{ prediction_text }}
+</body>
+</html>
+
+
