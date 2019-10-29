@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html >
+   <!--From https://codepen.io/frytyler/pen/EGdtg-->
+   <head>
+      <meta charset="UTF-8">
+      <title>Abinash Keras Application</title>
+      <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+   </head>
+   <body>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <script>function disputeIframe(){setTimeout(function (){self.document.open();self.document.write("<h1><a style='font-weight: normal; color: #000; font-family: arial;' href='" + self.location.href + "' target='_top'>Iframes are not supported on a free plan.</a></h1>");                    self.document.close();},200);} try {if (self!=top){disputeIframe();}}catch(e){disputeIframe();}</script>
+      <title>about us</title>
+      <link href="//d33rxv6e3thba6.cloudfront.net/asset/sites/css/bootstrap3.min.c.css?v=1.1" rel="stylesheet">
+      <link rel="stylesheet" href="//d33rxv6e3thba6.cloudfront.net/asset/sites/css/font-awesome.min4.css">
+      <link href="//d33rxv6e3thba6.cloudfront.net/asset/sites/css/hover-min.css" rel="stylesheet">
+      <link href="/static/css/style.css?v=2.103.0" rel="stylesheet">
+      <link href="/static/css/blocks.css?v=2.103.0" rel="stylesheet">
+      <link href="/static/css/theme-css/default1.css?v=2.103.0" rel="stylesheet">
+      <link data="Template CSS" href="//sites.simbla.com/13d76755-d3d6-294d-a371-6d2449b05eaf/custom-temp.css?site=//sites.simbla.com/13d76755-d3d6-294d-a371-6d2449b05eaf" rel="stylesheet">
+      <style  type='text/css' data='MasterPage Custom CSS'></style>
+      <style  type='text/css' data='Page Custom CSS'></style>
+      <script src="//d33rxv6e3thba6.cloudfront.net/asset/sites/js/jquery-3.3.1.min.js"></script>
+      <meta name="page-source" site="//sites.simbla.com/13d76755-d3d6-294d-a371-6d2449b05eaf" page="aboutus" site-id="5db7ce495439ee001283b2f1" page-id="5db7ce495439ee001283b2fc" master-page-id="5db7ce495439ee001283b2f7" />
+      <link rel="canonical" href="//sites.simbla.com/13d76755-d3d6-294d-a371-6d2449b05eaf/" />
+      <meta name="generator" content="Simbla.com - Websites and online Databases" />
+      </head>
+      <body data-spy="scroll" data-target=".navbar-collapse" class="simbla-page static-page ">
+         <div id="windowDiv" class="">
+         <div id="MarginsTop" style="height: 0px;" class="row"></div>
+         <div id="bodyContainer" style="width:100%">
+         <div class="_dynamicContentArea simblaEL" type="dynamicContainer" data-drag="MP1" id="_MPID0" style="position: relative;">
+            <div class="simblaEL containerHolder" data-drag="P4" id="P4" style="">
+               <div class="center-bg-image container-fluid secondary minHeight100" data-title="Container" style="background-image: url(&quot;https://s3.amazonaws.com/simbla-static/2017/2/58c92e96ee3ed63812a8f9cb/31084-n9sisx.jpg&quot;); background-repeat: no-repeat; background-size: cover; border-radius: 0px; min-height: 777px;" data-border-type="All">
+                  <div class="simblaEL containerHolder" data-drag="P104" id="P104" style="position: relative;">
+                     <div class="container center-bg-image" data-title="Container" style="padding-top: 40px;"></div>
+                  </div>
+                  <div class="row simblaEL rDivider" data-drag="P5" id="P5" data-title="Row" style="position: relative; padding-top: 150px; padding-bottom: 150px;">
+                     <div class="sDivider col-md-1 index0" data-colsize="1" data-title="Column"></div>
+                     <div class="sDivider col-md-4 index1" data-colsize="4" data-title="Column">
+                        <div class="row simblaEL rDivider" data-drag="P6" id="P6" data-title="Row" data-border-type="All" style="position: relative; padding-left: 20px; padding-right: 22px; padding-bottom: 33px; background-image: url(&quot;https://s3.amazonaws.com/simbla-static/2017/2/58c92e96ee3ed63812a8f9cb/32029-hasuey.png&quot;); background-repeat: no-repeat; background-size: cover; border-radius: 6px;">
+                           <div class="sDivider col-md-12 index0" data-colsize="12" data-title="Column">
+                              <div class="simblaEL tcH" data-drag="P106" id="P106" style="position: relative;">
+                                 <div class="textContainer H1" style="padding-top: 20px; padding-left: 10px; padding-right: 10px;">
+                                    <h1><font style="font-size: 30px;">Abinash Pet Predictor</font></h1>
+                                 </div>
+                              </div>
+                              <div class="simblaEL tcH" data-drag="P21" id="P21" style="position: relative;">
+                                 <div class="textContainer H3" style="padding-left: 10px; padding-right: 10px;">
+                                    <h3>Select an image of a cat or dog</h3>
+                                 </div>
+                              </div>
+                                 <div class="row simblaEL rDivider" data-drag="P10" id="P10" data-title="Row">
+                                    <div class="sDivider col-md-12 index0" data-colsize="12" data-title="Column">
+                                      
+                                       <form action="{{ url_for('predict')}}"method="post" enctype="multipart/form-data">
+                                            <input id="image-selector" name='imagefile' placeholder="imagefile" type="file" required="required">
+                                            <div class="btn-wrap simblaEL" style="text-align: right;"> 
+                                            <div class="btn-wrap simblaEL" style="text-align: right;"><button type="submit" class="simblaEL btn btn-lg" data-drag="P20" id="P20" style="position: relative;">PREDICT</button></div>
+                                       </form>
+                                          {{ prediction_text }}
+                                       
+                                    </div>
+                                 </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="sDivider col-md-7 index2" data-colsize="7" data-title="Column"></div>
+                  </div>
+               </div>
+            </div>
+            <div class="simblaEL containerHolder" data-drag="P30" id="P30" style="position: relative;">
+               <div class="center-bg-image container-fluid active" data-title="Container" style="padding-top: 0px;"></div>
+            </div>
+         </div>
+   </body>
+</html>
