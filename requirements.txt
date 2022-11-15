@@ -3,4 +3,3 @@ tensorflow
 keras
 gunicorn
 pillow
-python 3.9.15
